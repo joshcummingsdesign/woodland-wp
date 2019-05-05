@@ -1,0 +1,29 @@
+/*=============================================
+=                   Builder                   =
+=============================================*/
+
+// Builder WP UI
+.fl-builder .wp-core-ui  {
+  color: initial;
+
+  select {
+    margin: 11px 0 0;
+    border: 1px solid #dddddd;
+    padding: 2px;
+    vertical-align: baseline;
+    line-height: 28px;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    width: 300px !important;
+  }
+
+  select[multiple] {
+    -webkit-appearance: listbox;
+    -moz-appearance: listbox;
+  }
+
+  input[type=checkbox] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+  }
+}

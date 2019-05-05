@@ -1,0 +1,48 @@
+{
+  "body_class": "home",
+  "is_mobile": false,
+  "site": {
+    "url": "/",
+    "charset": "UTF-8",
+    "language": "en",
+    "title": "woodland"
+  },
+  "menus": {
+    "header": {
+      "items": [
+        {
+          "url": "/company",
+          "name": "Company",
+          "children": [
+            {
+              "url": "/about",
+              "name": "About",
+              "children": [
+                {
+                  "url": "/customers",
+                  "name": "Customers"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "/blog",
+          "name": "Blog"
+        }
+      ]
+    }
+  },
+  "organisms": {
+    "accordion": {
+      "spacing": " h-pt-lg h-pb-lg",
+      "heading": "Accordion Heading",
+      "items": [
+        {
+          "heading": "Item Heading",
+          "text": "<p class=\"p\">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>"
+        }
+      ]
+    }
+  }
+}

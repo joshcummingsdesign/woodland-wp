@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+
+  {% include 'includes/head.twig' %}
+
+  {% if is_mobile %}
+    {% set mobile_class = ' h-is-mobile' %}
+  {% else %}
+    {% set mobile_class = '' %}
+  {% endif %}
+
+  <body class="{{ body_class }}{{ mobile_class }}">
+
+    {% include 'includes/header.twig' %}
+
+    <main>
+      {% block content %}
+        {# Main content goes here... #}
+      {% endblock %}
+    </main>
+
+    {% include 'includes/foot.twig' %}
+
+  </body>
+</html>

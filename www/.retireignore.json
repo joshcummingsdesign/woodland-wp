@@ -1,0 +1,7 @@
+[
+  {
+    "component": "jquery",
+    "version": "1.12.4",
+    "justification": "Waiting on the world to change: https://core.trac.wordpress.org/ticket/37110"
+  }
+]

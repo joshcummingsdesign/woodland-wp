@@ -1,0 +1,17 @@
+{
+  "name": "woodland/woodland",
+  "version": "1.0.0",
+  "license": "GPL-2.0",
+  "description": "The woodland Plugin",
+  "authors": [
+
+  ],
+  "require": {
+    "timber/timber": "~1.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Woodland\\": "./"
+    }
+  }
+}

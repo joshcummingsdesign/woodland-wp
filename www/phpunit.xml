@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./html/wp-content/plugins/woodland/tests/bootstrap.php"
+         backupGlobals="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true">
+  <testsuites>
+    <testsuite>
+      <directory suffix=".php">./html/wp-content/plugins/woodland/tests/unit-tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

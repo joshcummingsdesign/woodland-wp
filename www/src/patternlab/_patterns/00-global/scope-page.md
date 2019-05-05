@@ -1,0 +1,1 @@
+These styles should be scoped to a particular class, i.e. s-page, s-post, etc. These should not be global styles (see _scope-page.scss). The file _typography.scss contains headings, paragraphs, etc. as class names (.h1 througth .h6 and so on).

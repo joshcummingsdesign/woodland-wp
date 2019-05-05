@@ -1,0 +1,46 @@
+#### System Files ####
+.DS_Store
+
+
+#### Editor Files ####
+.ftpconfig
+.vscode
+.history
+
+
+#### Dependencies ####
+node_modules
+
+
+#### Public ####
+www/html/*
+
+
+#### WordPress ####
+!www/html/wp-content
+www/html/wp-content/*
+!www/html/wp-content/index.php
+
+
+#### WordPress Plugins ####
+!www/html/wp-content/plugins
+www/html/wp-content/plugins/*
+!www/html/wp-content/plugins/index.php
+!www/html/wp-content/plugins/advanced-custom-fields-pro
+
+
+#### WordPress Themes ####
+!www/html/wp-content/themes
+www/html/wp-content/themes/*
+!www/html/wp-content/themes/index.php
+
+
+#### Plugin ####
+!www/html/wp-content/plugins/woodland
+www/html/wp-content/plugins/woodland/vendor
+
+
+#### Theme ####
+!www/html/wp-content/themes/woodland
+www/html/wp-content/themes/woodland/dist
+www/html/wp-content/themes/woodland/views

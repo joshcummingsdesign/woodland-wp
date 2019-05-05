@@ -1,0 +1,33 @@
+{{ patternLabFoot | raw }}
+
+<script>
+
+function loadAsset(type, link) {
+
+  if (type === 'link') {
+    var el = document.querySelector('link[href="' + link + '"]');
+  } else if (type === 'script') {
+    var el = document.querySelector('script[src="' + link + '"]');
+  }
+
+  if (!el) {
+
+    var el = document.createElement(type);
+
+    if (type === 'link') {
+      el.setAttribute('rel', 'stylesheet');
+      el.setAttribute('href', link);
+      document.head.appendChild(el);
+    } else if (type === 'script') {
+      el.setAttribute('src', link);
+      document.body.appendChild(el);
+    }
+  }
+}
+
+loadAsset('link', '/wp-content/themes/woodland/dist/styles/main.css');
+loadAsset('script', '/wp-content/themes/woodland/dist/scripts/vendor.js');
+loadAsset('script', '/wp-content/themes/woodland/dist/scripts/app.js');
+loadAsset('script', '/browser-sync/browser.js?v=2.26.5');
+
+</script>

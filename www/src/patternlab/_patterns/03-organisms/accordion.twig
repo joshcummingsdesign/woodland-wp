@@ -1,0 +1,12 @@
+{% set data = organisms.accordion %}
+
+<div class="o-accordion{{ data.spacing }}">
+
+  <h2>{{ data.heading }}</h2>
+
+  {% for item in data.items %}
+    <h3>{{ item.heading }}</h3>
+    {{ item.text|raw }}
+  {% endfor %}
+
+</div>

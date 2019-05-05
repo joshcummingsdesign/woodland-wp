@@ -1,0 +1,24 @@
+<a href="{{ site.url }}">Home</a>
+<nav>
+  {% if menus.header.items %}
+    <ul>
+      {% for item in menus.header.items %}
+        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+        {% if item.children %}
+          <ul>
+            {% for child in item.children %}
+              <li><a href="{{ child.url }}">{{ child.name }}</a></li>
+              {% if child.children %}
+                <ul>
+                  {% for grandchild in child.children %}
+                    <li><a href="{{ grandchild.url }}">{{ grandchild.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>
