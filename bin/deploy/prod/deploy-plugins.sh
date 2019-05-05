@@ -14,6 +14,4 @@ echo
 
 echo "Updating options..."
 echo
-ssh $PROD_USER@$PROD_IP "cd applications/$PROD_DB/public_html; \
-  wp plugin uninstall --deactivate grizzly-deploy; \
-  wp option set blog_public 1;"
+

@@ -66,7 +66,7 @@ clean:
 	@bin/tasks/clean.sh
 
 help:
-	@echo "	Welcome to Grizzly WP!"
+	@echo "	Welcome to Woodland WP!"
 	@echo ""
 	@echo "	make coffee"
 	@echo "					- Run start, install, deps, and build"

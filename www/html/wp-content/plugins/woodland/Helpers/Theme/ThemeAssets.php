@@ -32,7 +32,7 @@ class ThemeAssets {
 
     // main.css
     wp_enqueue_style(
-      'grizzly/css',
+      'woodland/css',
       AssetPath::get('styles/main.css'),
       [],
       null
@@ -40,7 +40,7 @@ class ThemeAssets {
 
     // vendor.js
     wp_enqueue_script(
-      'grizzly/vendor-js',
+      'woodland/vendor-js',
       AssetPath::get('scripts/vendor.js'),
       ['jquery'],
       null,
@@ -49,9 +49,9 @@ class ThemeAssets {
 
     // app.js
     wp_enqueue_script(
-      'grizzly/js',
+      'woodland/js',
       AssetPath::get('scripts/app.js'),
-      ['jquery', 'grizzly/vendor-js'],
+      ['jquery', 'woodland/vendor-js'],
       null,
       true
     );

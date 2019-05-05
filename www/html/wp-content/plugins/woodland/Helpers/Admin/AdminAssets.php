@@ -29,7 +29,7 @@ class AdminAssets {
 
     // admin.css
     wp_enqueue_style(
-      'grizzly/admin-css',
+      'woodland/admin-css',
       AssetPath::get('styles/admin.css'),
       [],
       null
@@ -37,7 +37,7 @@ class AdminAssets {
 
     // admin.js
     wp_enqueue_script(
-      'grizzly/admin-js',
+      'woodland/admin-js',
       AssetPath::get('scripts/admin.js'),
       ['jquery'],
       null,

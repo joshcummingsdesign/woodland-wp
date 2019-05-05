@@ -73,7 +73,6 @@ if [[ $PROCEED == "y" ]]; then
       && chown -R www-data:www-data wp-content \
       && wp plugin deactivate \
         elasticpress \
-        grizzly-deploy \
         w3-total-cache"
 
   else

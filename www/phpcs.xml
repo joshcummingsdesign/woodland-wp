@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="Grizzly">
-  <description>Grizzly Coding Standards</description>
+<ruleset name="Woodland">
+  <description>Woodland Coding Standards</description>
 
   <!-- Scan these files -->
   <file>./html/wp-content/themes/woodland</file>
