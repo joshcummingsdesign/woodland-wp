@@ -1,101 +1,12 @@
 <?php
 
-/**
- * Run all builder normalization functions.
- *
- * @param object $settings The builder settings object
- * @return object The noramlized builder settings object
- */
-function gzNormalize(&$settings) {
-  gzNormalizeDefaults($settings);
-  gzNormalizeRename($settings);
-  gzNormalizeSpacing($settings);
-  gzNormalizeItems($settings);
-  gzNormalizeImages($settings);
-  gzNormalizeVideos($settings);
-  gzNormalizeLinks($settings);
-}
-
-/**
- * Removes all builder settings keys except those with "gz" prefix.
- *
- * Optionally pass an array of items you want to keep.
- *
- * @param object $settings The builder settings object
- * @param array  $filters  Items you want to keep in the object
- */
-function gzNormalizeDefaults(&$settings, $filters = []) {
-
-  foreach ($settings as $setting => $value) {
-
-    $isFilteredItem = in_array($setting, $filters);
-    $isGzItem = preg_match('/^gz.+$/', $setting);
-
-    if (!$isFilteredItem && !$isGzItem) {
-      unset($settings->$setting);
-    }
-  }
-}
-
-/**
- * Remove "gz" prefix from builder settings keys.
- *
- * @param object $settings The builder settings object
- */
-function gzNormalizeRename(&$settings) {
-
-  foreach ($settings as $setting => $value) {
-
-    $isGzItem = preg_match('/^gz.+$/', $setting);
-
-    if ($isGzItem) {
-      $key = lcfirst(str_replace('gz', '', $setting));
-      $settings->$key = $value;
-      unset($settings->$setting);
-    }
-  }
-}
-
-/**
- * Normalizes the spacing options for the builder.
- *
- * @param object $settings The builder settings object
- */
-function gzNormalizeSpacing(&$settings) {
-
-  $paddingSizes = [
-    'pt',
-    'pb',
-    'ptsm',
-    'pbsm',
-    'ptmd',
-    'pbmd',
-    'ptlg',
-    'pblg'
-  ];
-
-  $padding = '';
-
-  foreach ($paddingSizes as $size) {
-
-    if (empty($settings->$size) || $settings->$size === 'none' || gettype($settings->$size) !== 'string') {
-      unset($settings->$size);
-      continue;
-    }
-
-    $padding .= ' ' . $settings->$size;
-    unset($settings->$size);
-  }
-
-  $settings->spacing = $padding;
-}
 
 /**
  * Removes extraneous properties from builder items.
  *
  * @param object $settings The builder settings object
  */
-function gzNormalizeItems(&$settings) {
+function wlNormalizeItems(&$settings) {
 
   if (empty($settings->items)) {
     return;
@@ -114,7 +25,7 @@ function gzNormalizeItems(&$settings) {
  *
  * @param int $id The image ID
  */
-function gzNormalizeImageById($id) {
+function wlNormalizeImageById($id) {
 
   // Get alt text
   $alt = get_post_meta($id, '_wp_attachment_image_alt', true);
@@ -143,14 +54,14 @@ function gzNormalizeImageById($id) {
  *
  * @param object $settings The builder settings object
  */
-function gzNormalizeImages(&$settings) {
+function wlNormalizeImages(&$settings) {
 
   if (empty($settings->image)) {
     return;
   }
 
   // Create image object
-  $image = gzNormalizeImageById($settings->image);
+  $image = wlNormalizeImageById($settings->image);
 
   // Override default properties
   $settings->image = $image;
@@ -162,7 +73,7 @@ function gzNormalizeImages(&$settings) {
  *
  * @param object $settings The builder settings object
  */
-function gzNormalizeVideos(&$settings) {
+function wlNormalizeVideos(&$settings) {
 
   foreach (['video', 'video1', 'video2'] as $key) {
     if (empty($settings->$key)) {
@@ -178,7 +89,7 @@ function gzNormalizeVideos(&$settings) {
  *
  * @param object $settings The builder settings object
  */
-function gzNormalizeLinks(&$settings) {
+function wlNormalizeLinks(&$settings) {
 
   if (isset($settings->linkText) && isset($settings->linkUrl)) {
     $link = (object)[
@@ -197,7 +108,7 @@ function gzNormalizeLinks(&$settings) {
  * @param object $menuData An object of Timber menu objects to normalize
  * @return object The normalized menus object
  */
-function gzNormalizeMenus($menuData) {
+function wlNormalizeMenus($menuData) {
 
   $menus = (object)[];
 
@@ -259,7 +170,7 @@ function gzNormalizeMenus($menuData) {
  * @param string $class A class to add to the paragraph tags
  * @return void
  */
-function gzAddParagraphTags($text, $class = '') {
+function wlAddParagraphTags($text, $class = '') {
   $class = !empty($class) ? ' class="' . $class . '"': '';
   $content = implode('</p><p' . $class . '>', array_filter(explode("\n", $text)));
   return '<p' . $class . '>' . $content . '</p>';

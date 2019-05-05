@@ -36,7 +36,7 @@ class AdminMenus {
     // remove_menu_page('edit-comments.php');                    //Comments
     // remove_menu_page('themes.php');                           //Appearance
 
-    if (gzIsProd() || gzIsStaging()) {
+    if (wlIsProd() || wlIsStaging()) {
       // remove_menu_page('options-general.php');                //Settings
       // remove_menu_page('edit.php?post_type=acf-field-group'); //ACF
     }

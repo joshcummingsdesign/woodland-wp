@@ -6,7 +6,7 @@
  * @param mixed $var  The item you want to print
  * @param array $args Tag options
  */
-function gzPrettyPrint($var, $args = []) {
+function wlPrettyPrint($var, $args = []) {
 
   $defaults = [
     'strip_tags' => false,
@@ -30,7 +30,7 @@ function gzPrettyPrint($var, $args = []) {
  * @param mixed $var  The item you want to print
  * @param array $args Tag options
  */
-function gzppd($var, $args = []) {
-  gzPrettyPrint($var, $args);
+function wlppd($var, $args = []) {
+  wlPrettyPrint($var, $args);
   die();
 }

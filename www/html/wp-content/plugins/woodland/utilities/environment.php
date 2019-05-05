@@ -5,7 +5,7 @@
  *
  * @return bool
  */
-function gzIsStaging() {
+function wlIsStaging() {
   return defined('WP_ENV') && WP_ENV === 'staging';
 }
 
@@ -14,6 +14,6 @@ function gzIsStaging() {
  *
  * @return bool
  */
-function gzIsProd() {
+function wlIsProd() {
   return defined('WP_ENV') && WP_ENV === 'prod';
 }

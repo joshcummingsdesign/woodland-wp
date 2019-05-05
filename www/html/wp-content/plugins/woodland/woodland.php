@@ -219,8 +219,8 @@ if (!class_exists(__NAMESPACE__ . '\Woodland')) {
     private function includes() {
       require_once WLWP_PLUGIN_DIR . 'vendor/autoload.php';
       require_once WLWP_PLUGIN_DIR . 'utilities/environment.php';
-      require_once WLWP_PLUGIN_DIR . 'utilities/pretty-print.php';
       require_once WLWP_PLUGIN_DIR . 'utilities/normalize-data.php';
+      require_once WLWP_PLUGIN_DIR . 'utilities/pretty-print.php';
     }
 
 

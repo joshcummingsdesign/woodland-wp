@@ -11,9 +11,6 @@ if (!$_tests_dir) {
 // Require core testing functions.
 require_once $_tests_dir . '/includes/functions.php';
 
-// Require testing utility functions.
-require_once dirname(dirname(__FILE__)) . '/tests/utilities/builder-settings.php';
-
 /**
  * Manually load plugins needed for testing.
  */
