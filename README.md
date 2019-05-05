@@ -15,6 +15,8 @@ chmod +x www/html/wp-content/plugins/woodland/tests/bin/install-wp-tests.sh
 make coffee
 ```
 
+Then take this time to prepare a coffee...
+
 Then go to `https://localhost/wp-admin/`
 
 ```
