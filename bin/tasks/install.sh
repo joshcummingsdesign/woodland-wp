@@ -42,5 +42,5 @@ docker exec -it $WP_CONTAINER bash -c "\
   && echo \
   && echo 'Setting up WordPress test environment...' \
   && echo \
-  && if [ ! -e /tmp/wordpress-tests-lib/wp-tests-config.php ]; then ./wp-content/plugins/$THEME/tests/bin/install-wp-tests.sh wordpress_test root '' mysql latest; else echo 'WordPress test environment already configured.'; fi \
+  && if [ ! -e /tmp/wordpress-tests-lib/wp-tests-config.php ]; then ./wp-content/plugins/$PLUGIN/tests/bin/install-wp-tests.sh wordpress_test root '' mysql latest; else echo 'WordPress test environment already configured.'; fi \
   && echo"

@@ -13,7 +13,7 @@ echo
 
 echo "Deploying plugins..."
 echo
-rsync -azq --partial --delete www/html/wp-content/plugins/$THEME/ \
+rsync -azq --partial --delete www/html/wp-content/plugins/$PLUGIN/ \
   $STG_USER@$STG_IP:applications/$STG_DB/public_html/wp-content/plugins/$THEME/
 
 echo

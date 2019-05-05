@@ -12,6 +12,6 @@ docker exec -it $WP_CONTAINER bash -c "source ~/.bashrc \
   && echo \
   && echo 'Running composer install...' \
   && echo \
-  && cd html/wp-content/plugins/$THEME \
+  && cd html/wp-content/plugins/$PLUGIN \
   && COMPOSER_ALLOW_SUPERUSER=1 composer install -o \
   && echo"

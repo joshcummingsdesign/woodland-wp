@@ -13,8 +13,8 @@ echo
 
 echo "Deploying plugins..."
 echo
-rsync -azq --partial --delete www/html/wp-content/plugins/$THEME/ \
-  $DEV_USER@$DEV_IP:applications/$DEV_DB/public_html/wp-content/plugins/$THEME/
+rsync -azq --partial --delete www/html/wp-content/plugins/$PLUGIN/ \
+  $DEV_USER@$DEV_IP:applications/$DEV_DB/public_html/wp-content/plugins/$PLUGIN/
 
 echo
 echo "==========================="

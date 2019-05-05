@@ -13,5 +13,5 @@ echo
 
 echo "Deploying plugins..."
 echo
-rsync -azq --partial --delete www/html/wp-content/plugins/$THEME/ \
-  $PROD_USER@$PROD_IP:applications/$PROD_DB/public_html/wp-content/plugins/$THEME/
+rsync -azq --partial --delete www/html/wp-content/plugins/$PLUGIN/ \
+  $PROD_USER@$PROD_IP:applications/$PROD_DB/public_html/wp-content/plugins/$PLUGIN/
